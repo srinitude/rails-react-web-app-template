@@ -45,7 +45,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     && git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build \
     && rbenv install 2.7.1 \
     && rbenv rehash \
-    && rbenv global 2.7.1 \
-    
+    && rbenv global 2.7.1
+
 
 CMD [ "bash" ]
