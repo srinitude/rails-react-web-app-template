@@ -46,7 +46,6 @@ RUN DEBIAN_FRONTEND=noninteractive \
     && rbenv install 2.7.1 \
     && rbenv rehash \
     && rbenv global 2.7.1 \
-    && rbenv -v \
-	&& ruby --version 
+    
 
 CMD [ "bash" ]
