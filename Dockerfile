@@ -1,3 +1,8 @@
 FROM srinitude/ruby:latest
 
-CMD [ "bash" ]
+SHELL ["/bin/bash", "-c"]
+
+RUN set -ex \
+    \
+    && gem install bundler \
+    && gem install rails 6.0.3
