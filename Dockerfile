@@ -4,8 +4,8 @@ SHELL ["/bin/bash", "-c"]
 
 RUN set -ex \
     \
-    && curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh \
-    && nodesource_setup.sh \
+    && apt install -y sudo \
+    && curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list \
     && apt -y update \
